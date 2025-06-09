@@ -1,0 +1,191 @@
+/* Base styles */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff8f0;
+    color: #333;
+    text-align: center;
+    overflow-x: hidden;
+  }
+  
+  header {
+    background: #e63946;
+    color: white;
+    padding: 2rem 1rem;
+  }
+  
+  header p {
+    font-size: 18px;
+  }
+  
+  main {
+    padding: 2rem 1rem;
+  }
+  
+  /* Pizza Visual */
+  .pizza-visual {
+    margin: 2rem auto;
+    max-width: 400px;
+  }
+  
+  .pizza {
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+    animation: popIn 1s ease-out;
+  }
+  
+  .ring {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px #000;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.9;
+  }
+  
+  .appetizer-ring {
+    top: 20%;
+    background: rgba(244, 162, 97, 0.5);
+    animation: slideInTop 1s ease forwards;
+  }
+  
+  .main-ring {
+    top: 45%;
+    background: rgba(231, 111, 81, 0.5);
+    animation: slideInTop 1.2s ease forwards;
+  }
+  
+  .dessert-ring {
+    top: 75%;
+    background: rgba(252, 191, 73, 0.5);
+    animation: slideInTop 1.4s ease forwards;
+  }
+  
+  .ring:hover {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  
+  /* Menu Styles */
+  .menu {
+    max-width: 600px;
+    margin: 2rem auto;
+    text-align: left;
+  }
+  
+  .menu h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .menu-item {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .menu-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Journey Types */
+  .menu-item.vegetarian {
+    background: #f0fff4;
+    border-left: 6px solid #6a994e;
+  }
+  
+  .menu-item.vegan {
+    background: #e9ffe8;
+    border-left: 6px solid #55a630;
+  }
+  
+  .menu-item.regular {
+    background: #fff2f0;
+    border-left: 6px solid #e63946;
+  }
+  
+  .menu-item.single {
+    background: #f0f8ff;
+    border-left: 6px solid #3a86ff;
+  }
+  
+  .menu-item.couple {
+    background: #fff0f5;
+    border-left: 6px solid #ff006e;
+  }
+  
+  /* Image in section */
+  section img {
+    display: block;
+    max-width: 30%;
+    height: auto;
+    margin: 2rem auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  section img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Animation */
+  @keyframes slideInTop {
+    0% { transform: translateY(-50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+  
+  @keyframes popIn {
+    0% { transform: scale(0.7); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  .fade-in.delay {
+    animation-delay: 0.5s;
+  }
+  
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+  
+  /* Footer */
+  footer {
+    background: #333;
+    color: white;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .pizza {
+      height: 220px;
+      max-width: 220px;
+    }
+  
+    .ring {
+      font-size: 0.8rem;
+    }
+  
+    .menu {
+      padding: 0 1rem;
+    }
+  
+    section img {
+      max-width: 70%;
+    }
+  }
+  
